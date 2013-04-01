@@ -1,0 +1,6 @@
+[submodule "SeruroClientWin/frameworks/boost"]
+	path = SeruroClientWin/frameworks/boost
+	url = git@iper-git:seruro/seruro-boost.git
+[submodule "SeruroClientWin/src"]
+	path = SeruroClientWin/src
+	url = git@iper-git:seruro/seruro-client.git
