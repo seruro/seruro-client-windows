@@ -4,3 +4,6 @@
 [submodule "SeruroClientWin/src"]
 	path = SeruroClientWin/src
 	url = git@iper-git:seruro/seruro-client.git
+[submodule "SeruroClientWin/frameworks/wxwidgets"]
+	path = SeruroClientWin/frameworks/wxwidgets
+	url = git@iper-git:seruro/seruro-wxwidgets.git
