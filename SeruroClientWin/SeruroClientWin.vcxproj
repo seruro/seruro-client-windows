@@ -85,21 +85,26 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h" />
-    <ClInclude Include="src\frames\SeruroFrameConfigure.h" />
-    <ClInclude Include="src\frames\SeruroFrameDecrypt.h" />
-    <ClInclude Include="src\frames\SeruroFrameEncrypt.h" />
-    <ClInclude Include="src\frames\SeruroFrameSearch.h" />
-    <ClInclude Include="src\frames\SeruroFrameUpdate.h" />
+    <ClInclude Include="src\frames\SeruroFrameMain.h" />
+    <ClInclude Include="src\frames\SeruroFrames.h" />
+    <ClInclude Include="src\frames\SeruroPanelConfigure.h" />
+    <ClInclude Include="src\frames\SeruroPanelDecrypt.h" />
+    <ClInclude Include="src\frames\SeruroPanelEncrypt.h" />
+    <ClInclude Include="src\frames\SeruroPanelSearch.h" />
+    <ClInclude Include="src\frames\SeruroPanelUpdate.h" />
     <ClInclude Include="src\SeruroClient.h" />
+    <ClInclude Include="src\SeruroSetup.h" />
     <ClInclude Include="src\SeruroTray.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\frames\SeruroFrameConfigure.cpp" />
-    <ClCompile Include="src\frames\SeruroFrameDecrypt.cpp" />
-    <ClCompile Include="src\frames\SeruroFrameEncrypt.cpp" />
-    <ClCompile Include="src\frames\SeruroFrameSearch.cpp" />
-    <ClCompile Include="src\frames\SeruroFrameUpdate.cpp" />
+    <ClCompile Include="src\frames\SeruroFrameMain.cpp" />
+    <ClCompile Include="src\frames\SeruroPanelConfigure.cpp" />
+    <ClCompile Include="src\frames\SeruroPanelDecrypt.cpp" />
+    <ClCompile Include="src\frames\SeruroPanelEncrypt.cpp" />
+    <ClCompile Include="src\frames\SeruroPanelSearch.cpp" />
+    <ClCompile Include="src\frames\SeruroPanelUpdate.cpp" />
     <ClCompile Include="src\SeruroClient.cpp" />
+    <ClCompile Include="src\SeruroSetup.cpp" />
     <ClCompile Include="src\SeruroTray.cpp" />
   </ItemGroup>
   <ItemGroup>

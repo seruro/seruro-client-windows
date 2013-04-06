@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Frames">
+      <UniqueIdentifier>{75413346-806e-4c59-bd44-f54088d03a3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Frames">
+      <UniqueIdentifier>{c8d53a10-c3fc-4274-8687-cf44417c0c5b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
@@ -33,20 +39,29 @@
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\frames\SeruroFrameConfigure.h">
+    <ClInclude Include="src\SeruroSetup.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\frames\SeruroFrameDecrypt.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\frames\SeruroFrameMain.h">
+      <Filter>Header Files\Frames</Filter>
     </ClInclude>
-    <ClInclude Include="src\frames\SeruroFrameEncrypt.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\frames\SeruroPanelUpdate.h">
+      <Filter>Header Files\Frames</Filter>
     </ClInclude>
-    <ClInclude Include="src\frames\SeruroFrameSearch.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\frames\SeruroFrames.h">
+      <Filter>Header Files\Frames</Filter>
     </ClInclude>
-    <ClInclude Include="src\frames\SeruroFrameUpdate.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\frames\SeruroPanelConfigure.h">
+      <Filter>Header Files\Frames</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frames\SeruroPanelDecrypt.h">
+      <Filter>Header Files\Frames</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frames\SeruroPanelEncrypt.h">
+      <Filter>Header Files\Frames</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frames\SeruroPanelSearch.h">
+      <Filter>Header Files\Frames</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -56,19 +71,25 @@
     <ClCompile Include="src\SeruroTray.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\frames\SeruroFrameConfigure.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\frames\SeruroPanelUpdate.cpp">
+      <Filter>Source Files\Frames</Filter>
     </ClCompile>
-    <ClCompile Include="src\frames\SeruroFrameDecrypt.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\frames\SeruroFrameMain.cpp">
+      <Filter>Source Files\Frames</Filter>
     </ClCompile>
-    <ClCompile Include="src\frames\SeruroFrameEncrypt.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\frames\SeruroPanelConfigure.cpp">
+      <Filter>Source Files\Frames</Filter>
     </ClCompile>
-    <ClCompile Include="src\frames\SeruroFrameSearch.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\frames\SeruroPanelDecrypt.cpp">
+      <Filter>Source Files\Frames</Filter>
     </ClCompile>
-    <ClCompile Include="src\frames\SeruroFrameUpdate.cpp">
+    <ClCompile Include="src\frames\SeruroPanelEncrypt.cpp">
+      <Filter>Source Files\Frames</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\SeruroPanelSearch.cpp">
+      <Filter>Source Files\Frames</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SeruroSetup.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
