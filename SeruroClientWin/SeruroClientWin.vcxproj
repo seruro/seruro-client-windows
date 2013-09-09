@@ -5,9 +5,17 @@
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -20,13 +28,28 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -34,14 +57,26 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -49,17 +84,57 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;WINVER=0x400;__WXMSW__;_WINDOWS;wxUSE_GUI=1;__VLD__;_UNICODE;_CRT_SECURE_NO_DEPRECATE</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(WXWIN)\include;$(WXWIN)\include\msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;WINVER=0x400;__WXMSW__;_WINDOWS;wxUSE_GUI=1;__VLD__;_UNICODE;__WXDEBUG__;_CRT_SECURE_NO_DEPRECATE</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(WindowsSDK_IncludePath);$(FrameworkSDKDir)\include;$(WXWIN)\include;$(WXWIN)\include\msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(WXWIN)\lib\vc_lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(WindowsSDK_LibraryPath_x86);$(FrameworkSDKDir)\lib;$(WXWIN)\lib\vc_lib;C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>wxmsw29ud_core.lib;wxbase29ud.lib;wxbase29ud_net.lib;MAPI32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;WINVER=0x400;__WXMSW__;_WINDOWS;wxUSE_GUI=1;__VLD__;_UNICODE;_CRT_SECURE_NO_DEPRECATE</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(WXWIN)\include;$(WXWIN)\include\msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(WXWIN)\lib\vc_x64_lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>wxmsw29ud_core.lib;wxbase29ud.lib;wxbase29ud_net.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;WINVER=0x400;__WXMSW__;_WINDOWS;wxUSE_GUI=1;_UNICODE;_CRT_SECURE_NO_DEPRECATE;RELEASE_DEBUG</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(WindowsSDK_IncludePath);$(WXWIN)\include;$(WXWIN)\include\msvc;$(FrameworkSDKDir)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Lib;$(FrameworkSDKDir)\lib;$(WindowsSDK_LibraryPath_x86);$(WindowsSdkDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;$(WXWIN)\lib\vc_lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>wxmsw29u_core.lib;wxbase29u.lib;wxbase29u_net.lib;MAPI32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -80,32 +155,117 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
-    <None Include="src\resources\icon_good.ico" />
-    <None Include="src\resources\icon_good.png" />
+    <None Include="seruro_icons.ico" />
+    <None Include="src\wxJSON\wx\jsonval.h.new" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="src\frames\SeruroFrameMain.h" />
-    <ClInclude Include="src\frames\SeruroFrames.h" />
-    <ClInclude Include="src\frames\SeruroPanelConfigure.h" />
-    <ClInclude Include="src\frames\SeruroPanelDecrypt.h" />
-    <ClInclude Include="src\frames\SeruroPanelEncrypt.h" />
-    <ClInclude Include="src\frames\SeruroPanelSearch.h" />
-    <ClInclude Include="src\frames\SeruroPanelUpdate.h" />
+    <ClInclude Include="src\api\SeruroClientAPI.h" />
+    <ClInclude Include="src\api\SeruroRequest.h" />
+    <ClInclude Include="src\api\SeruroServerAPI.h" />
+    <ClInclude Include="src\api\SeruroStateEvents.h" />
+    <ClInclude Include="src\api\Utils.h" />
+    <ClInclude Include="src\AppDefs.h" />
+    <ClInclude Include="src\apps\AppMSW_LiveMail.h" />
+    <ClInclude Include="src\apps\AppMSW_Outlook.h" />
+    <ClInclude Include="src\apps\AppOSX_Mail.h" />
+    <ClInclude Include="src\apps\AppOSX_Outlook.h" />
+    <ClInclude Include="src\apps\ProcessManager.h" />
+    <ClInclude Include="src\apps\SeruroApps.h" />
+    <ClInclude Include="src\crypto\SeruroCrypto.h" />
+    <ClInclude Include="src\crypto\SeruroCryptoMAC.h" />
+    <ClInclude Include="src\crypto\SeruroCryptoMSW.h" />
+    <ClInclude Include="src\Defs.h" />
+    <ClInclude Include="src\frames\components\AppAccountList.h" />
+    <ClInclude Include="src\frames\components\CheckedListCtrl.h" />
+    <ClInclude Include="src\frames\components\ContactList.h" />
+    <ClInclude Include="src\frames\components\PasswordCtrl.h" />
+    <ClInclude Include="src\frames\dialogs\AddAccountDialog.h" />
+    <ClInclude Include="src\frames\dialogs\AddServerDialog.h" />
+    <ClInclude Include="src\frames\dialogs\AlertDialog.h" />
+    <ClInclude Include="src\frames\dialogs\AuthDialog.h" />
+    <ClInclude Include="src\frames\dialogs\DebugReportDialog.h" />
+    <ClInclude Include="src\frames\dialogs\DecryptDialog.h" />
+    <ClInclude Include="src\frames\dialogs\ErrorDialog.h" />
+    <ClInclude Include="src\frames\dialogs\RemoveDialog.h" />
+    <ClInclude Include="src\frames\dialogs\RestartAppDialog.h" />
+    <ClInclude Include="src\frames\SeruroContacts.h" />
+    <ClInclude Include="src\frames\SeruroFrame.h" />
+    <ClInclude Include="src\frames\SeruroHelp.h" />
+    <ClInclude Include="src\frames\SeruroHome.h" />
+    <ClInclude Include="src\frames\SeruroMain.h" />
+    <ClInclude Include="src\frames\SeruroSearch.h" />
+    <ClInclude Include="src\frames\SeruroSettings.h" />
+    <ClInclude Include="src\frames\settings\SettingsPanels.h" />
+    <ClInclude Include="src\frames\settings\SettingsWindows.h" />
+    <ClInclude Include="src\frames\UIDefs.h" />
+    <ClInclude Include="src\include\MAPIUtil.h" />
+    <ClInclude Include="src\include\MAPIX.h" />
+    <ClInclude Include="src\lang\en_US.h" />
+    <ClInclude Include="src\logging\SeruroLogger.h" />
     <ClInclude Include="src\SeruroClient.h" />
+    <ClInclude Include="src\SeruroConfig.h" />
     <ClInclude Include="src\SeruroSetup.h" />
     <ClInclude Include="src\SeruroTray.h" />
+    <ClInclude Include="src\setup\SeruroSetup.h" />
+    <ClInclude Include="src\wxJSON\wx\jsonreader.h" />
+    <ClInclude Include="src\wxJSON\wx\jsonval.h" />
+    <ClInclude Include="src\wxJSON\wx\jsonwriter.h" />
+    <ClInclude Include="src\wxJSON\wx\json_defs.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\frames\SeruroFrameMain.cpp" />
-    <ClCompile Include="src\frames\SeruroPanelConfigure.cpp" />
-    <ClCompile Include="src\frames\SeruroPanelDecrypt.cpp" />
-    <ClCompile Include="src\frames\SeruroPanelEncrypt.cpp" />
-    <ClCompile Include="src\frames\SeruroPanelSearch.cpp" />
-    <ClCompile Include="src\frames\SeruroPanelUpdate.cpp" />
+    <ClCompile Include="src\api\SeruroClientAPI.cpp" />
+    <ClCompile Include="src\api\SeruroRequest.cpp" />
+    <ClCompile Include="src\api\SeruroServerAPI.cpp" />
+    <ClCompile Include="src\api\SeruroStateEvents.cpp" />
+    <ClCompile Include="src\api\ServerMonitor.cpp" />
+    <ClCompile Include="src\api\Utils.cpp" />
+    <ClCompile Include="src\apps\AppMSW_LiveMail.cpp" />
+    <ClCompile Include="src\apps\AppMSW_Outlook.cpp" />
+    <ClCompile Include="src\apps\AppOSX_Mail.cpp" />
+    <ClCompile Include="src\apps\AppOSX_Outlook.cpp" />
+    <ClCompile Include="src\apps\ProcessManager.cpp" />
+    <ClCompile Include="src\apps\SeruroApps.cpp" />
+    <ClCompile Include="src\crypto\SeruroCryptoMAC.cpp" />
+    <ClCompile Include="src\crypto\SeruroCryptoMSW.cpp" />
+    <ClCompile Include="src\frames\components\AppAccountList.cpp" />
+    <ClCompile Include="src\frames\components\CheckedListCtrl.cpp" />
+    <ClCompile Include="src\frames\components\ContactList.cpp" />
+    <ClCompile Include="src\frames\components\PasswordCtrl.cpp" />
+    <ClCompile Include="src\frames\dialogs\AddAccountDialog.cpp" />
+    <ClCompile Include="src\frames\dialogs\AddServerDialog.cpp" />
+    <ClCompile Include="src\frames\dialogs\AlertDialog.cpp" />
+    <ClCompile Include="src\frames\dialogs\AuthDialog.cpp" />
+    <ClCompile Include="src\frames\dialogs\DebugReportDialog.cpp" />
+    <ClCompile Include="src\frames\dialogs\DecryptDialog.cpp" />
+    <ClCompile Include="src\frames\dialogs\ErrorDialog.cpp" />
+    <ClCompile Include="src\frames\dialogs\RemoveDialog.cpp" />
+    <ClCompile Include="src\frames\dialogs\RestartAppDialog.cpp" />
+    <ClCompile Include="src\frames\SeruroContacts.cpp" />
+    <ClCompile Include="src\frames\SeruroFrame.cpp" />
+    <ClCompile Include="src\frames\SeruroHelp.cpp" />
+    <ClCompile Include="src\frames\SeruroHome.cpp" />
+    <ClCompile Include="src\frames\SeruroMain.cpp" />
+    <ClCompile Include="src\frames\SeruroSearch.cpp" />
+    <ClCompile Include="src\frames\SeruroSettings.cpp" />
+    <ClCompile Include="src\frames\settings\AccountsWindow.cpp" />
+    <ClCompile Include="src\frames\settings\ApplicationsWindow.cpp" />
+    <ClCompile Include="src\frames\settings\ExtensionsWindow.cpp" />
+    <ClCompile Include="src\frames\settings\GeneralWindow.cpp" />
+    <ClCompile Include="src\frames\settings\LogWindow.cpp" />
+    <ClCompile Include="src\logging\LogFormatter.cpp" />
+    <ClCompile Include="src\logging\SeruroLogger.cpp" />
     <ClCompile Include="src\SeruroClient.cpp" />
-    <ClCompile Include="src\SeruroSetup.cpp" />
+    <ClCompile Include="src\SeruroConfig.cpp" />
+    <ClCompile Include="src\SeruroMonitor.cpp" />
     <ClCompile Include="src\SeruroTray.cpp" />
+    <ClCompile Include="src\setup\AccountSetupPage.cpp" />
+    <ClCompile Include="src\setup\ApplicationsSetupPage.cpp" />
+    <ClCompile Include="src\setup\IdentitySetupPage.cpp" />
+    <ClCompile Include="src\setup\SeruroSetup.cpp" />
+    <ClCompile Include="src\setup\SettingsSetupPage.cpp" />
+    <ClCompile Include="src\wxJSON\jsonreader.cpp" />
+    <ClCompile Include="src\wxJSON\jsonval.cpp" />
+    <ClCompile Include="src\wxJSON\jsonwriter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="src\resources\resource.rc" />

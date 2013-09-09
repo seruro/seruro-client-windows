@@ -19,13 +19,55 @@
     <Filter Include="Source Files\Frames">
       <UniqueIdentifier>{c8d53a10-c3fc-4274-8687-cf44417c0c5b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="wxJSON">
+      <UniqueIdentifier>{ad7e7594-3347-4748-8a0c-fdfafe3c1899}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="wxJSON\wx">
+      <UniqueIdentifier>{4719283f-7b36-45e7-864f-74e5135b5c8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Frames\Dialogs">
+      <UniqueIdentifier>{cceb2e47-b34f-44b9-af6c-ca497a0841e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Frames\Settings">
+      <UniqueIdentifier>{65ce70d7-d5fe-44a0-ba42-ea084dff392a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Frames\Dialogs">
+      <UniqueIdentifier>{137faea7-752f-4012-9120-71625bf5b1bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Lang">
+      <UniqueIdentifier>{5a07d6d9-a158-4fe7-9897-1b4e924da57b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Crypto">
+      <UniqueIdentifier>{0f0ba4be-d357-4cc3-a282-0c44b7653cc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\API">
+      <UniqueIdentifier>{fc2cc092-e8ce-42f8-8c92-5e1eed7cd283}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Setup">
+      <UniqueIdentifier>{04d0514f-9146-47eb-8371-cf88e54aa1d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Apps">
+      <UniqueIdentifier>{c8456603-ea28-446d-8598-2507232d58ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Frames\Settings">
+      <UniqueIdentifier>{657d378a-27b8-4f05-9939-0a72010d842f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Frames\Components">
+      <UniqueIdentifier>{f518a6f9-bf90-45f5-bf93-a69beb41685e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Logging">
+      <UniqueIdentifier>{4a0345d4-478f-4854-9b28-3b61060e7943}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Include">
+      <UniqueIdentifier>{8e44e55e-0543-426f-926e-026de1d242ac}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
-    <None Include="src\resources\icon_good.png">
-      <Filter>Resource Files</Filter>
+    <None Include="src\wxJSON\wx\jsonval.h.new">
+      <Filter>wxJSON\wx</Filter>
     </None>
-    <None Include="src\resources\icon_good.ico">
+    <None Include="seruro_icons.ico">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
@@ -36,31 +78,154 @@
     <ClInclude Include="src\SeruroTray.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\SeruroSetup.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\frames\SeruroFrameMain.h">
+    <ClInclude Include="src\wxJSON\wx\json_defs.h">
+      <Filter>wxJSON\wx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\wxJSON\wx\jsonreader.h">
+      <Filter>wxJSON\wx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\wxJSON\wx\jsonval.h">
+      <Filter>wxJSON\wx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\wxJSON\wx\jsonwriter.h">
+      <Filter>wxJSON\wx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SeruroConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frames\SeruroFrame.h">
       <Filter>Header Files\Frames</Filter>
     </ClInclude>
-    <ClInclude Include="src\frames\SeruroPanelUpdate.h">
+    <ClInclude Include="src\api\SeruroClientAPI.h">
+      <Filter>Source Files\API</Filter>
+    </ClInclude>
+    <ClInclude Include="src\api\SeruroServerAPI.h">
+      <Filter>Source Files\API</Filter>
+    </ClInclude>
+    <ClInclude Include="src\crypto\SeruroCrypto.h">
+      <Filter>Source Files\Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="src\crypto\SeruroCryptoMSW.h">
+      <Filter>Source Files\Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="src\crypto\SeruroCryptoMAC.h">
+      <Filter>Source Files\Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Defs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frames\settings\SettingsPanels.h">
+      <Filter>Header Files\Frames\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frames\dialogs\AuthDialog.h">
+      <Filter>Header Files\Frames\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frames\dialogs\DecryptDialog.h">
+      <Filter>Header Files\Frames\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\api\SeruroRequest.h">
+      <Filter>Source Files\API</Filter>
+    </ClInclude>
+    <ClInclude Include="src\api\Utils.h">
+      <Filter>Source Files\API</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frames\dialogs\AddAccountDialog.h">
+      <Filter>Header Files\Frames\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frames\dialogs\AddServerDialog.h">
+      <Filter>Header Files\Frames\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lang\en_US.h">
+      <Filter>Header Files\Lang</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frames\UIDefs.h">
       <Filter>Header Files\Frames</Filter>
     </ClInclude>
-    <ClInclude Include="src\frames\SeruroFrames.h">
+    <ClInclude Include="src\setup\SeruroSetup.h">
+      <Filter>Source Files\Setup</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frames\dialogs\RemoveDialog.h">
+      <Filter>Header Files\Frames\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\apps\AppOSX_Mail.h">
+      <Filter>Source Files\Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\apps\SeruroApps.h">
+      <Filter>Source Files\Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\api\SeruroStateEvents.h">
+      <Filter>Source Files\API</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frames\settings\SettingsWindows.h">
+      <Filter>Source Files\Frames\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frames\components\CheckedListCtrl.h">
+      <Filter>Source Files\Frames\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\logging\SeruroLogger.h">
+      <Filter>Source Files\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AppDefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frames\dialogs\DebugReportDialog.h">
+      <Filter>Header Files\Frames\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frames\dialogs\ErrorDialog.h">
+      <Filter>Header Files\Frames\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\apps\AppMSW_LiveMail.h">
+      <Filter>Source Files\Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\apps\AppMSW_Outlook.h">
+      <Filter>Source Files\Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\apps\AppOSX_Outlook.h">
+      <Filter>Source Files\Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frames\components\PasswordCtrl.h">
+      <Filter>Source Files\Frames\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frames\dialogs\AlertDialog.h">
+      <Filter>Header Files\Frames\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\apps\ProcessManager.h">
+      <Filter>Source Files\Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frames\dialogs\RestartAppDialog.h">
+      <Filter>Header Files\Frames\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frames\components\AppAccountList.h">
+      <Filter>Source Files\Frames\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\MAPIX.h">
+      <Filter>Header Files\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\MAPIUtil.h">
+      <Filter>Header Files\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frames\components\ContactList.h">
+      <Filter>Source Files\Frames\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frames\SeruroHelp.h">
       <Filter>Header Files\Frames</Filter>
     </ClInclude>
-    <ClInclude Include="src\frames\SeruroPanelConfigure.h">
+    <ClInclude Include="src\frames\SeruroHome.h">
       <Filter>Header Files\Frames</Filter>
     </ClInclude>
-    <ClInclude Include="src\frames\SeruroPanelDecrypt.h">
+    <ClInclude Include="src\frames\SeruroMain.h">
       <Filter>Header Files\Frames</Filter>
     </ClInclude>
-    <ClInclude Include="src\frames\SeruroPanelEncrypt.h">
+    <ClInclude Include="src\frames\SeruroSearch.h">
       <Filter>Header Files\Frames</Filter>
     </ClInclude>
-    <ClInclude Include="src\frames\SeruroPanelSearch.h">
+    <ClInclude Include="src\frames\SeruroSettings.h">
+      <Filter>Header Files\Frames</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frames\SeruroContacts.h">
       <Filter>Header Files\Frames</Filter>
     </ClInclude>
   </ItemGroup>
@@ -71,26 +236,158 @@
     <ClCompile Include="src\SeruroTray.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\frames\SeruroPanelUpdate.cpp">
-      <Filter>Source Files\Frames</Filter>
+    <ClCompile Include="src\wxJSON\jsonreader.cpp">
+      <Filter>wxJSON</Filter>
     </ClCompile>
-    <ClCompile Include="src\frames\SeruroFrameMain.cpp">
-      <Filter>Source Files\Frames</Filter>
+    <ClCompile Include="src\wxJSON\jsonval.cpp">
+      <Filter>wxJSON</Filter>
     </ClCompile>
-    <ClCompile Include="src\frames\SeruroPanelConfigure.cpp">
-      <Filter>Source Files\Frames</Filter>
+    <ClCompile Include="src\wxJSON\jsonwriter.cpp">
+      <Filter>wxJSON</Filter>
     </ClCompile>
-    <ClCompile Include="src\frames\SeruroPanelDecrypt.cpp">
-      <Filter>Source Files\Frames</Filter>
-    </ClCompile>
-    <ClCompile Include="src\frames\SeruroPanelEncrypt.cpp">
-      <Filter>Source Files\Frames</Filter>
-    </ClCompile>
-    <ClCompile Include="src\frames\SeruroPanelSearch.cpp">
-      <Filter>Source Files\Frames</Filter>
-    </ClCompile>
-    <ClCompile Include="src\SeruroSetup.cpp">
+    <ClCompile Include="src\SeruroConfig.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\SeruroFrame.cpp">
+      <Filter>Source Files\Frames</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api\SeruroClientAPI.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api\SeruroServerAPI.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="src\crypto\SeruroCryptoMSW.cpp">
+      <Filter>Source Files\Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="src\crypto\SeruroCryptoMAC.cpp">
+      <Filter>Source Files\Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\dialogs\AuthDialog.cpp">
+      <Filter>Source Files\Frames\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\dialogs\DecryptDialog.cpp">
+      <Filter>Source Files\Frames\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api\SeruroRequest.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api\Utils.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\dialogs\AddAccountDialog.cpp">
+      <Filter>Source Files\Frames\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\dialogs\AddServerDialog.cpp">
+      <Filter>Source Files\Frames\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\setup\AccountSetupPage.cpp">
+      <Filter>Source Files\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="src\setup\ApplicationsSetupPage.cpp">
+      <Filter>Source Files\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="src\setup\SeruroSetup.cpp">
+      <Filter>Source Files\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="src\setup\SettingsSetupPage.cpp">
+      <Filter>Source Files\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\dialogs\RemoveDialog.cpp">
+      <Filter>Source Files\Frames\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\setup\IdentitySetupPage.cpp">
+      <Filter>Source Files\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="src\apps\AppOSX_Mail.cpp">
+      <Filter>Source Files\Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\apps\SeruroApps.cpp">
+      <Filter>Source Files\Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api\SeruroStateEvents.cpp">
+      <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\settings\AccountsWindow.cpp">
+      <Filter>Source Files\Frames\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\settings\ApplicationsWindow.cpp">
+      <Filter>Source Files\Frames\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\settings\ExtensionsWindow.cpp">
+      <Filter>Source Files\Frames\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\settings\GeneralWindow.cpp">
+      <Filter>Source Files\Frames\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\components\CheckedListCtrl.cpp">
+      <Filter>Source Files\Frames\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logging\LogFormatter.cpp">
+      <Filter>Source Files\Logging</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logging\SeruroLogger.cpp">
+      <Filter>Source Files\Logging</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\settings\LogWindow.cpp">
+      <Filter>Source Files\Frames\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\dialogs\DebugReportDialog.cpp">
+      <Filter>Source Files\Frames\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\dialogs\ErrorDialog.cpp">
+      <Filter>Source Files\Frames\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\apps\AppMSW_LiveMail.cpp">
+      <Filter>Source Files\Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\apps\AppMSW_Outlook.cpp">
+      <Filter>Source Files\Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\apps\AppOSX_Outlook.cpp">
+      <Filter>Source Files\Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\components\PasswordCtrl.cpp">
+      <Filter>Source Files\Frames\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\dialogs\AlertDialog.cpp">
+      <Filter>Source Files\Frames\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\apps\ProcessManager.cpp">
+      <Filter>Source Files\Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\dialogs\RestartAppDialog.cpp">
+      <Filter>Source Files\Frames\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\components\AppAccountList.cpp">
+      <Filter>Source Files\Frames\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\components\ContactList.cpp">
+      <Filter>Source Files\Frames\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\SeruroHelp.cpp">
+      <Filter>Source Files\Frames</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\SeruroHome.cpp">
+      <Filter>Source Files\Frames</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\SeruroMain.cpp">
+      <Filter>Source Files\Frames</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\SeruroSearch.cpp">
+      <Filter>Source Files\Frames</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\SeruroSettings.cpp">
+      <Filter>Source Files\Frames</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\SeruroContacts.cpp">
+      <Filter>Source Files\Frames</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SeruroMonitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api\ServerMonitor.cpp">
+      <Filter>Source Files\API</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
