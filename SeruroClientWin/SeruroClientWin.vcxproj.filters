@@ -228,6 +228,9 @@
     <ClInclude Include="src\frames\SeruroContacts.h">
       <Filter>Header Files\Frames</Filter>
     </ClInclude>
+    <ClInclude Include="src\apps\AppMonitor.h">
+      <Filter>Source Files\Apps</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\SeruroClient.cpp">
@@ -388,6 +391,9 @@
     </ClCompile>
     <ClCompile Include="src\api\ServerMonitor.cpp">
       <Filter>Source Files\API</Filter>
+    </ClCompile>
+    <ClCompile Include="src\apps\AppMonitor.cpp">
+      <Filter>Source Files\Apps</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
