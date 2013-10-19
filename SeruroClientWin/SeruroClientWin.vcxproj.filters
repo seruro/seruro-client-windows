@@ -231,6 +231,9 @@
     <ClInclude Include="src\apps\AppMonitor.h">
       <Filter>Source Files\Apps</Filter>
     </ClInclude>
+    <ClInclude Include="src\setup\CancelSetupDialog.h">
+      <Filter>Source Files\Setup</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\SeruroClient.cpp">
@@ -332,9 +335,6 @@
     <ClCompile Include="src\logging\SeruroLogger.cpp">
       <Filter>Source Files\Logging</Filter>
     </ClCompile>
-    <ClCompile Include="src\frames\settings\LogWindow.cpp">
-      <Filter>Source Files\Frames\Settings</Filter>
-    </ClCompile>
     <ClCompile Include="src\frames\dialogs\DebugReportDialog.cpp">
       <Filter>Source Files\Frames\Dialogs</Filter>
     </ClCompile>
@@ -394,6 +394,12 @@
     </ClCompile>
     <ClCompile Include="src\apps\AppMonitor.cpp">
       <Filter>Source Files\Apps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\setup\CancelSetupDialog.cpp">
+      <Filter>Source Files\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="src\frames\settings\LogWindow.cpp">
+      <Filter>Source Files\Frames\Settings</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
