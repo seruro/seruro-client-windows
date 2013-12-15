@@ -172,9 +172,12 @@
     <ClInclude Include="src\apps\AppOSX_Outlook.h" />
     <ClInclude Include="src\apps\ProcessManager.h" />
     <ClInclude Include="src\apps\SeruroApps.h" />
+    <ClInclude Include="src\crypto\CryptoMonitor.h" />
+    <ClInclude Include="src\crypto\MSWCryptoUtils.h" />
+    <ClInclude Include="src\crypto\OSXCryptoUtils.h" />
     <ClInclude Include="src\crypto\SeruroCrypto.h" />
-    <ClInclude Include="src\crypto\SeruroCryptoMAC.h" />
-    <ClInclude Include="src\crypto\SeruroCryptoMSW.h" />
+    <ClInclude Include="src\crypto\SeruroMSWCrypto.h" />
+    <ClInclude Include="src\crypto\SeruroOSXCrypto.h" />
     <ClInclude Include="src\Defs.h" />
     <ClInclude Include="src\frames\components\AppAccountList.h" />
     <ClInclude Include="src\frames\components\CheckedListCtrl.h" />
@@ -189,6 +192,7 @@
     <ClInclude Include="src\frames\dialogs\ErrorDialog.h" />
     <ClInclude Include="src\frames\dialogs\RemoveDialog.h" />
     <ClInclude Include="src\frames\dialogs\RestartAppDialog.h" />
+    <ClInclude Include="src\frames\ImageDefs.h" />
     <ClInclude Include="src\frames\SeruroContacts.h" />
     <ClInclude Include="src\frames\SeruroFrame.h" />
     <ClInclude Include="src\frames\SeruroHelp.h" />
@@ -228,8 +232,11 @@
     <ClCompile Include="src\apps\AppOSX_Outlook.cpp" />
     <ClCompile Include="src\apps\ProcessManager.cpp" />
     <ClCompile Include="src\apps\SeruroApps.cpp" />
-    <ClCompile Include="src\crypto\SeruroCryptoMAC.cpp" />
-    <ClCompile Include="src\crypto\SeruroCryptoMSW.cpp" />
+    <ClCompile Include="src\crypto\CryptoMonitor.cpp" />
+    <ClCompile Include="src\crypto\MSWCryptoUtils.cpp" />
+    <ClCompile Include="src\crypto\OSXCryptoUtils.cpp" />
+    <ClCompile Include="src\crypto\SeruroMSWCrypto.cpp" />
+    <ClCompile Include="src\crypto\SeruroOSXCrypto.cpp" />
     <ClCompile Include="src\frames\components\AppAccountList.cpp" />
     <ClCompile Include="src\frames\components\CheckedListCtrl.cpp" />
     <ClCompile Include="src\frames\components\ContactList.cpp" />
