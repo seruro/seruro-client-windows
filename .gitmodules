@@ -1,9 +1,9 @@
 [submodule "SeruroClientWin/frameworks/boost"]
 	path = SeruroClientWin/frameworks/boost
-	url = git@iper-git:seruro/seruro-boost.git
+	url = https://github.com/seruro/seruro-boost.git
 [submodule "SeruroClientWin/src"]
 	path = SeruroClientWin/src
-	url = git@iper-git:seruro/seruro-client.git
+	url = https://github.com/seruro/seruro-client.git
 [submodule "SeruroClientWin/frameworks/wxwidgets"]
 	path = SeruroClientWin/frameworks/wxwidgets
-	url = git@iper-git:seruro/seruro-wxwidgets.git
+	url = https://github.com/seruro/seruro-wxwidgets.git
